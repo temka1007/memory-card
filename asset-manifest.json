@@ -1,16 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.46f5c8f5.js",
-    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/static/css/main.09e237a2.css",
+    "main.js": "/static/js/main.b5a7ab3e.js",
+    "static/media/chokmah.png": "/static/media/chokmah.61f40b36a204bacc1760.png",
+    "static/media/background.jpg": "/static/media/background.be2d9d6cf48fdd82fe6a.jpg",
+    "static/media/netzach.png": "/static/media/netzach.14d5105d0802bd43c756.png",
+    "static/media/geburah.png": "/static/media/geburah.739832b92f632b749fc0.png",
+    "static/media/hod.png": "/static/media/hod.9bae252ea9ccc4bef163.png",
+    "static/media/golab.png": "/static/media/golab.ec176e63fc35766791e5.png",
+    "static/media/samael.png": "/static/media/samael.1aa5013751c099ad606f.png",
+    "static/media/thaumiel.png": "/static/media/thaumiel.204a16956cb6777a89d4.png",
+    "static/media/chesed.png": "/static/media/chesed.076500f9ceac9b9b987a.png",
+    "static/media/chagidiel.png": "/static/media/chagidiel.f11cb8448f035a291dab.png",
+    "static/media/sathariel.png": "/static/media/sathariel.e4140b562baf7349dbdb.png",
+    "static/media/binah.png": "/static/media/binah.e98ca99ee6ecc5bb7aa0.png",
+    "static/media/astaroth.png": "/static/media/astaroth.2323310b2d58910b72eb.png",
+    "static/media/back.png": "/static/media/back.2bab8922b7bfbd93775a.png",
     "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.46f5c8f5.js.map": "/static/js/main.46f5c8f5.js.map",
-    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+    "main.09e237a2.css.map": "/static/css/main.09e237a2.css.map",
+    "main.b5a7ab3e.js.map": "/static/js/main.b5a7ab3e.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.46f5c8f5.js"
+    "static/css/main.09e237a2.css",
+    "static/js/main.b5a7ab3e.js"
   ]
 }
