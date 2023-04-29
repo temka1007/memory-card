@@ -216,4 +216,5 @@ main {
   height: var(--height);
   width: calc(var(--height) * 0.6);
   border-radius: 8px;
+  cursor: pointer;
 }

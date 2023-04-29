@@ -1,14 +1,14 @@
 import React, { useState, useMemo, useEffect, useRef } from "react"
 
-const Score = () => {
+const Score = ({ currentScore, bestScore }) => {
   return (
     <div className="score-container">
       <div className="current-score">
         <div>Score</div>
-        <div>10</div>
+        <div>{currentScore}</div>
       </div>
       <div className="best-score">
-        <div>7</div>
+        <div>{bestScore}</div>
         <div>Best Score</div>
       </div>
     </div>

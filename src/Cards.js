@@ -56,7 +56,7 @@ const shuffle = arr => {
   return [...arr].sort(() => Math.random() - 0.5)
 }
 
-const Cards = () => {
+const Cards = ({ handleCurrentScore }) => {
   const [cards, setCards] = useState(cardData)
   const [chosenCards, setChosenCards] = useState([])
 
@@ -68,8 +68,12 @@ const Cards = () => {
   const compare = newCard => {
     if (chosenCards.includes(newCard)) {
       alert("GAME OVER")
+      handleCurrentScore(0)
+      setChosenCards([])
     } else {
-      setChosenCards([...chosenCards, newCard])
+      const newArr = [...chosenCards, newCard]
+      setChosenCards(newArr)
+      handleCurrentScore(newArr.length)
     }
   }
 
