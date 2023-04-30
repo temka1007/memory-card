@@ -4,12 +4,12 @@ const Score = ({ currentScore, bestScore }) => {
   return (
     <div className="score-container">
       <div className="current-score">
-        <div>Score</div>
-        <div>{currentScore}</div>
+        <div>SCORE</div>
+        <div className="icon-current">{currentScore}</div>
       </div>
       <div className="best-score">
-        <div>{bestScore}</div>
-        <div>Best Score</div>
+        <div className="icon-best">{bestScore}</div>
+        <div>BEST SCORE</div>
       </div>
     </div>
   )

@@ -8,6 +8,9 @@ function App() {
   const [currentScore, setCurrentScore] = useState(0)
   const [bestScore, setBestScore] = useState(0)
 
+  const [shadow, setShadow] = useState()
+  const [hover, setHover] = useState("#ffffffad")
+
   const handleCurrentScore = score => {
     setCurrentScore(score)
   }
@@ -18,16 +21,21 @@ function App() {
     }
   }, [currentScore])
 
+  const loseShadowColor = () => {
+    setShadow()
+  }
+
   return (
     <main>
       <div className="top-bar">
         <Score currentScore={currentScore} bestScore={bestScore} />
         <h1 className="title">TAROT MEMORY</h1>
       </div>
-      <Cards handleCurrentScore={handleCurrentScore} />
+      <Cards handleCurrentScore={handleCurrentScore} shadow={shadow} />
       <ResetBtn />
     </main>
   )
 }
 
 export default App
+//  #ff0000b7

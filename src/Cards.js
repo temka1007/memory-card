@@ -56,9 +56,11 @@ const shuffle = arr => {
   return [...arr].sort(() => Math.random() - 0.5)
 }
 
-const Cards = ({ handleCurrentScore }) => {
+const Cards = ({ handleCurrentScore, shadow }) => {
   const [cards, setCards] = useState(cardData)
   const [chosenCards, setChosenCards] = useState([])
+  const [deg, setDeg] = useState("0")
+  const [lose, setLose] = useState("the-front")
 
   const shuffleOnClick = () => {
     const shuffledCards = shuffle(cards)
@@ -67,9 +69,13 @@ const Cards = ({ handleCurrentScore }) => {
 
   const compare = newCard => {
     if (chosenCards.includes(newCard)) {
-      alert("GAME OVER")
-      handleCurrentScore(0)
-      setChosenCards([])
+      setLose("lose")
+      setTimeout(() => {
+        alert("GAME OVER")
+        handleCurrentScore(0)
+        setChosenCards([])
+        setLose("the-front")
+      }, 1000)
     } else {
       const newArr = [...chosenCards, newCard]
       setChosenCards(newArr)
@@ -77,7 +83,9 @@ const Cards = ({ handleCurrentScore }) => {
     }
   }
 
-  console.log(chosenCards)
+  const handleRotate = value => {
+    setDeg(value)
+  }
 
   return (
     <div className="card-container">
@@ -88,6 +96,9 @@ const Cards = ({ handleCurrentScore }) => {
           id={data.id}
           shuffleOnClick={shuffleOnClick}
           compare={compare}
+          handleRotate={handleRotate}
+          deg={deg}
+          lose={lose}
         />
       ))}
     </div>
