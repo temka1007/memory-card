@@ -1,4 +1,6 @@
 import React, { useState, useMemo, useEffect, useRef } from "react"
+import ReactDOM from "react-dom"
+import Tilt from "react-parallax-tilt"
 
 const Card = ({
   src,

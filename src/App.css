@@ -368,6 +368,18 @@ main {
 /* reset button */
 
 .reset-button {
-  width: 100px;
+  all: unset;
+  width: 200px;
   margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #ddd7c7;
+  font-size: 25px;
+  cursor: pointer;
+}
+.R {
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgb(214, 76, 81);
 }

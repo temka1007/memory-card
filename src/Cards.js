@@ -1,5 +1,7 @@
 import React, { useState, useMemo, useEffect, useRef } from "react"
 import Card from "./components/Card"
+import Tilt from "react-parallax-tilt"
+import ResetBtn from "./components/reset-btn"
 
 const cardData = [
   {
@@ -67,6 +69,11 @@ const Cards = ({ handleCurrentScore, shadow }) => {
     setCards(shuffledCards)
   }
 
+  const resetChosenCards = () => {
+    handleCurrentScore(0)
+    setChosenCards([])
+  }
+
   const compare = newCard => {
     if (chosenCards.includes(newCard)) {
       setLose("lose")
@@ -80,6 +87,18 @@ const Cards = ({ handleCurrentScore, shadow }) => {
       const newArr = [...chosenCards, newCard]
       setChosenCards(newArr)
       handleCurrentScore(newArr.length)
+      if (newArr.length === 12) {
+        alert("YOU WIN")
+        handleCurrentScore(12)
+        handleRotate("180")
+        resetChosenCards()
+        setTimeout(() => {
+          shuffleOnClick()
+        }, 500)
+        setTimeout(() => {
+          handleRotate("0")
+        }, 1000)
+      }
     }
   }
 
@@ -88,20 +107,29 @@ const Cards = ({ handleCurrentScore, shadow }) => {
   }
 
   return (
-    <div className="card-container">
-      {cards.map(data => (
-        <Card
-          src={data.src}
-          key={data.id}
-          id={data.id}
-          shuffleOnClick={shuffleOnClick}
-          compare={compare}
-          handleRotate={handleRotate}
-          deg={deg}
-          lose={lose}
-        />
-      ))}
-    </div>
+    <>
+      <div className="card-container">
+        {cards.map(data => (
+          <Tilt key={data.id}>
+            <Card
+              src={data.src}
+              key={data.id}
+              id={data.id}
+              shuffleOnClick={shuffleOnClick}
+              compare={compare}
+              handleRotate={handleRotate}
+              deg={deg}
+              lose={lose}
+            />
+          </Tilt>
+        ))}
+      </div>
+      <ResetBtn
+        resetChosenCards={resetChosenCards}
+        shuffleOnClick={shuffleOnClick}
+        handleRotate={handleRotate}
+      />
+    </>
   )
 }
 
